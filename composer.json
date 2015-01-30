@@ -1,0 +1,24 @@
+{
+    "name": "ogogo/hybridauth",
+    "description": "Open source social sign on PHP library.",
+    "type": "library",
+    "license": "(MIT or GPL-3.0+)", 
+    "authors": [
+        {
+            "name": "Finbarr",
+            "email": "finbarr@finbarr.org"
+        }
+    ],
+    "support": {
+        "email": "finbarr@finbarr.org"
+    },
+    "require": {
+        "php": ">=5.2.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Hybrid": "hybridauth/"
+        } 
+    }
+}
