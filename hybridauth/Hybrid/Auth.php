@@ -149,7 +149,7 @@ class Hybrid_Auth
 			}
 			else{
 				$baseUrl 	= $config['base_url'];
-				$pos 		= strpos($baseUrl,"/scn-social-auth");
+				$pos 		= strpos($baseUrl,"/social-auth");
 				$websiteURL = substr($baseUrl,0,$pos);
 				
 				Hybrid_Auth::redirect($websiteURL."/user/login" );	

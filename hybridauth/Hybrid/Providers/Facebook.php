@@ -80,10 +80,6 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 			*/
 		}
 
-		//$this->api->getUser();
-		
-		//$this->helper = new FacebookRedirectLoginHelper('http://localhost.zendfactory.com/scn-social-auth/hauth?hauth.done=Facebook');
-		//$this->helper = new FacebookRedirectLoginHelper('http://www.zendfactory.com/scn-social-auth/hauth?hauth.done=Facebook');
 		$this->helper = new FacebookRedirectLoginHelper(Hybrid_Auth::$config['base_url'].'?hauth.done=Facebook'.$userrole_str);
 
 		// see if a existing session exists
@@ -205,7 +201,7 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 			//throw new Exception( "Authentication failed! The user denied your request.", 5 );
 				
 			$baseUrl 	= Hybrid_Auth::$config['base_url'];
-			$pos 		= strpos($baseUrl,"/scn-social-auth");
+			$pos 		= strpos($baseUrl,"/social-auth");
 			$websiteURL = substr($baseUrl,0,$pos);
 
 			parent::logout();
@@ -276,7 +272,7 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 			//$url = $this->helper->getLogoutUrl($this->session, "http://localhost.zendfactory.com/user/logout");
 			
 			$baseUrl 	= Hybrid_Auth::$config['base_url'];
-			$pos 		= strpos($baseUrl,"/scn-social-auth");
+			$pos 		= strpos($baseUrl,"/social-auth");
 			$websiteURL = substr($baseUrl,0,$pos);
 
 			//$url = $this->helper->getLogoutUrl($this->session, "http://www.zendfactory.com/user/logout");
